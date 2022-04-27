@@ -35,6 +35,10 @@ function remove_sidebar_cart(){
 add_action( 'wp_head', 'remove_header_sidebar_checkout');
 add_action( 'wp_head', 'remove_sidebar_cart');
 
-
+// load css into the website's front-end
+function enqueue_style() {
+    wp_enqueue_style( 'style', get_stylesheet_uri() . '/style.css' ); 
+}
+add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_style' );
 
 ?>
